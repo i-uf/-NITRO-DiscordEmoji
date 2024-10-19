@@ -1,5 +1,6 @@
 4개의 서버 좌표
-https://discord.gg/mfvk6QRW
-https://discord.gg/tB3H274f
-https://discord.gg/gh3TYyEy
-https://discord.gg/fDYTGuwR
+
+- https://discord.gg/ZSjgnq78ef
+- https://discord.gg/UpCXTdhVBm
+- https://discord.gg/eSuywzprHm
+- https://discord.gg/ByEQNPXAPm
