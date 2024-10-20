@@ -15,7 +15,7 @@ fun main() {
     App.isVisible = true
 }
 var mode = 0
-object App : JFrame("[NITRO] DiscordEmoji v1.1.1") {
+object App : JFrame("[NITRO] DiscordEmoji v1.1.2") {
     private fun readResolve(): Any = App
     init {
         var result: Array<String>? = null
@@ -23,6 +23,7 @@ object App : JFrame("[NITRO] DiscordEmoji v1.1.1") {
         var imageRaw = false
         preferredSize = Dimension(654, 677)
         isResizable = false
+        isAlwaysOnTop = true
         contentPane.layout = null
         val upload = JButton("Upload")
         upload.bounds = Rectangle(480, 160)
