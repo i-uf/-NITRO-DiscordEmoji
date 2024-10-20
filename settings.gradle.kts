@@ -8,3 +8,7 @@ include("src:main:java")
 findProject(":src:main:java")?.name = "java"
 include("src:main:java:module")
 findProject(":src:main:java:module")?.name = "module"
+include("src:main:untitled")
+findProject(":src:main:untitled")?.name = "untitled"
+include("src:main:java")
+findProject(":src:main:java")?.name = "java"

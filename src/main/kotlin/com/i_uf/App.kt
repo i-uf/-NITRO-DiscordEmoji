@@ -14,7 +14,8 @@ import javax.swing.*
 fun main() {
     App.isVisible = true
 }
-object App : JFrame("[NITRO] DiscordEmoji v1.0.0") {
+var mode = 0
+object App : JFrame("[NITRO] DiscordEmoji v1.1.0") {
     private fun readResolve(): Any = App
     init {
         var result: Array<String>? = null
@@ -24,7 +25,7 @@ object App : JFrame("[NITRO] DiscordEmoji v1.0.0") {
         isResizable = false
         contentPane.layout = null
         val upload = JButton("Upload")
-        upload.bounds = Rectangle(640, 160)
+        upload.bounds = Rectangle(480, 160)
         contentPane.add(upload)
         val fileChooser = FileDialog(this, "이미지 업로드", FileDialog.LOAD)
         fileChooser.file = "*.png"
@@ -39,6 +40,8 @@ object App : JFrame("[NITRO] DiscordEmoji v1.0.0") {
         val button1 = buttonGroup.add(JButton("Copy Top")) as JButton
         val button2 = buttonGroup.add(JButton("Copy Bottom")) as JButton
         val button3 = buttonGroup.add(JButton("Mode: Discord")) as JButton
+        val button4 = contentPane.add(JButton("4 Servers")) as JButton
+        button4.bounds = Rectangle(480, 0, 160, 160)
         fun loadImage(file1: File) {
             file = file1
             val image = resizeImage(ImageIO.read(file), 16, 16)
@@ -67,6 +70,15 @@ object App : JFrame("[NITRO] DiscordEmoji v1.0.0") {
             imageRaw = !imageRaw
             file?.let { loadImage(it) }
             button3.text = if(imageRaw) "Mode: Image Raw" else "Mode: Discord"
+        }
+        button4.addActionListener {
+            mode = (mode+1)%3
+            file?.let { loadImage(it) }
+            button4.text = when(mode) {
+                0 -> "4 Servers"
+                1 -> "12 Servers"
+                else -> "82 Servers"
+            }
         }
         buttonGroup.isVisible = false
         upload.addActionListener{

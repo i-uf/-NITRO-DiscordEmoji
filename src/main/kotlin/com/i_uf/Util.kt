@@ -17,7 +17,7 @@ fun read16x16(image: BufferedImage): Array<String> {
     return result
 }
 fun read16x16C(image: BufferedImage): Array<Array<Color>> {
-    val result = Array(16){Array(16){ RED } }
+    val result = Array(16){Array(16){ Color("", 0, 0,0) } }
     for (i in 0 until 16) {
         for (j in 0 until 16) {
             val pixel = image.getRGB(j, i)
@@ -35,8 +35,14 @@ fun colorDistance(c1: Color, r: Int, g: Int, b: Int): Double {
             (c1.b - b).toDouble().pow(2))
 }
 fun findClosestColor(red: Int, green: Int, blue: Int): Color {
-    val colorList = arrayOf(*color1, *color2, *color3, *color4)
-    var closestColor = RED
+    if(mode == 2) {
+        return Color(":%X%X%X:".format((min(red + 8, 0xFF) ) shr 4,
+            min(green + 8, 0xFF) shr 4, min(blue + 8, 0xFF) shr 4),
+            min(red + 8, 0xFF) and 0xF0, min(green + 8, 0xFF)
+                    and 0xF0, min(blue + 8, 0xFF) and 0xF0)
+    }
+    val colorList = if(mode == 0) color4 else color12
+    var closestColor = Color(":000:", 0, 0,0)
     var minDistance = colorDistance(closestColor, red, green, blue)
 
     for (color in colorList) {
@@ -53,16 +59,3 @@ data class Color(val text: String, val r: Int, val g: Int, val b: Int) {
     fun rgb() = r shl 16 or (g shl 8) or b
     operator fun invoke(other: Color) = rgb() == other.rgb() || text == other.text
 }
-val RED = Color(":red_square:", 221, 46, 68)
-val BROWN = Color(":brown_square:", 193, 105, 79)
-val ORANGE = Color(":orange_square:", 244, 144, 13)
-val YELLOW = Color(":yellow_square:", 253, 203, 89)
-val GREEN = Color(":green_square:", 120, 177, 89)
-val BLUE = Color(":blue_square:", 84, 171, 237)
-val PURPLE = Color(":purple_square:", 170, 141, 215)
-val BLACK = Color(":black_large_square:", 49, 55, 61)
-val WHITE = Color(":white_large_square:", 230, 231, 232)
-private val colors = arrayOf(
-    RED, BROWN, ORANGE, YELLOW, GREEN,
-    BLUE, PURPLE, BLACK, WHITE
-)
