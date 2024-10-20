@@ -15,7 +15,7 @@ fun main() {
     App.isVisible = true
 }
 var mode = 0
-object App : JFrame("[NITRO] DiscordEmoji v1.1.0") {
+object App : JFrame("[NITRO] DiscordEmoji v1.1.1") {
     private fun readResolve(): Any = App
     init {
         var result: Array<String>? = null

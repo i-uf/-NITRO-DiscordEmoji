@@ -42,7 +42,7 @@ fun findClosestColor(red: Int, green: Int, blue: Int): Color {
                     and 0xF0, min(blue + 8, 0xFF) and 0xF0)
     }
     val colorList = if(mode == 0) color4 else color12
-    var closestColor = Color(":000:", 0, 0,0)
+    var closestColor = Color(":000000:", 0, 0,0)
     var minDistance = colorDistance(closestColor, red, green, blue)
 
     for (color in colorList) {
