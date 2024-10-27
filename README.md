@@ -1,44 +1,43 @@
 만약 디스코드에 니트로가 없다면 https://github.com/i-uf/DiscordEmoji
-Releases에서 최신버전 jar 다운하고 터미널에 java -jar 파일이름.jar으로 실행
+
+Releases에서 최신버전 jar 다운하고 터미널에 java -jar 파일이름.jar으로 실행<br><br>
 
 Upload 버튼 클릭 or 드래그로 이미지 선택
 
-Mode 버튼: 디스코드 이모지 색상과 실제 이미지
-Copy Top, Copy Bottom으로 반쪽짜리 이모지를 복사(한번에 입력하면 이모지가 잘리는 이슈가 있어서 자름)
+- Mode 버튼: 디스코드 이모지 색상과 실제 이미지
+- Copy Top, Copy Bottom으로 반쪽짜리 이모지를 복사(한번에 입력하면 이모지가 잘리는 이슈가 있어서 자름 & 니트로 4천글자 초과됨)
 
+사용가능
 - 4 Servers: 4개의 서버 참여 필요, (HSV) 색상 190개 + 흑백 10개
 - 12 Servers: 12개의 서버 참여 필요, (HSV) 색상 590개 + 흑백 10개
 - 82 Servers: 82개의 서버 참여 필요, (RGB) 반올림된 색상 4096개
-- 96 Servers: 모든 서버 참여 한 할거없는사람들에게 완벽한 흰색을 제공함
-#### 어디 들어올수있다면 들어와보시지 밑에 링크있음
+- 96 Servers: 모든 서버를 참여 한 할거없는 사람들에게 완벽한 흰색을 제공함
+<br><br>
 ![image](https://github.com/user-attachments/assets/3ce12c81-5bf0-4318-803c-127c3edb18c2)
-
-
 
 4개의 서버 좌표
 
 - https://discord.gg/ZSjgnq78ef
 - https://discord.gg/UpCXTdhVBm
 - https://discord.gg/eSuywzprHm
-- https://discord.gg/ByEQNPXAPm
+- https://discord.gg/ByEQNPXAPm<br><br>
 
 12개의 서버 좌표
 
 - https://discord.gg/AtSVFjABbw 1
 - https://discord.gg/cu5fP4qV8d
 - https://discord.gg/WkXVmHTvgz
-- https://discord.gg/wk2wVarG3K
+- https://discord.gg/wk2wVarG3K<br><br>
 
-  
 - https://discord.gg/zbdX9qHWrS 5
 - https://discord.gg/ktv8F7fWdC
 - https://discord.gg/BhuyyM5tzC
-- https://discord.gg/rrFNmK6baD
+- https://discord.gg/rrFNmK6baD<br><br>
 
 - https://discord.gg/vmV2NZTzfd 9
 - https://discord.gg/9VQ6KvEFyB
 - https://discord.gg/YZRk9qmDHW
-- https://discord.gg/FZ9mUzzHwa
+- https://discord.gg/FZ9mUzzHwa<br><br>
 
 82개의 서버 좌표
 - https://discord.gg/seMu3vNXbT 0
