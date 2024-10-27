@@ -15,7 +15,7 @@ fun main() {
     App.isVisible = true
 }
 var mode = 0
-object App : JFrame("[NITRO] DiscordEmoji v1.1.2") {
+object App : JFrame("[NITRO] DiscordEmoji v1.1.3") {
     private fun readResolve(): Any = App
     init {
         var result: Array<String>? = null
@@ -73,12 +73,13 @@ object App : JFrame("[NITRO] DiscordEmoji v1.1.2") {
             button3.text = if(imageRaw) "Mode: Image Raw" else "Mode: Discord"
         }
         button4.addActionListener {
-            mode = (mode+1)%3
+            mode = (mode+1)%4
             file?.let { loadImage(it) }
             button4.text = when(mode) {
                 0 -> "4 Servers"
                 1 -> "12 Servers"
-                else -> "82 Servers"
+                2 -> "82 Servers"
+                else -> "96 Servers"
             }
         }
         buttonGroup.isVisible = false

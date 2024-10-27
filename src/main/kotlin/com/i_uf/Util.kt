@@ -1,7 +1,10 @@
 package com.i_uf
 
 import java.awt.image.BufferedImage
-import kotlin.math.*
+import kotlin.math.min
+import kotlin.math.pow
+import kotlin.math.sqrt
+
 fun read16x16(image: BufferedImage): Array<String> {
     val result = Array(2){""}
     for (i in 0 until 16) {
@@ -41,8 +44,18 @@ fun findClosestColor(red: Int, green: Int, blue: Int): Color {
             min(red + 8, 0xFF) and 0xF0, min(green + 8, 0xFF)
                     and 0xF0, min(blue + 8, 0xFF) and 0xF0)
     }
-    val colorList = if(mode == 0) color4 else color12
+    val colorList = when (mode) {
+        0 -> color4
+        1 -> color12
+        else -> arrayOf(*color4, *color12)
+    }
     var closestColor = Color(":000000:", 0, 0,0)
+    if(mode == 3) {
+        closestColor = Color(":%X%X%X:".format((min(red + 8, 0xFF) ) shr 4,
+            min(green + 8, 0xFF) shr 4, min(blue + 8, 0xFF) shr 4),
+            min(red + 8, 0xFF) and 0xF0, min(green + 8, 0xFF)
+                    and 0xF0, min(blue + 8, 0xFF) and 0xF0)
+    }
     var minDistance = colorDistance(closestColor, red, green, blue)
 
     for (color in colorList) {
