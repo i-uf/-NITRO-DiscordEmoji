@@ -13,8 +13,6 @@ Upload 버튼 클릭 or 드래그로 이미지 선택
 - 82 Servers: 82개의 서버 참여 필요, (RGB) 반올림된 색상 4096개
 - 96 Servers: 모든 서버를 참여 한 할거없는 사람들에게 완벽한 흰색을 제공함
 <br><br>
-![image](https://github.com/user-attachments/assets/3ce12c81-5bf0-4318-803c-127c3edb18c2)
-
 4개의 서버 좌표
 
 - https://discord.gg/ZSjgnq78ef
