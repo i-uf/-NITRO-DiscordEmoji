@@ -15,13 +15,13 @@ fun main() {
     App.isVisible = true
 }
 var mode = 0
-object App : JFrame("[NITRO] DiscordEmoji v1.1.3") {
+object App : JFrame("[NITRO] DiscordEmoji v1.1.4") {
     private fun readResolve(): Any = App
     init {
         var result: Array<String>? = null
         var file: File? = null
         var imageRaw = false
-        preferredSize = Dimension(654, 677)
+        contentPane.preferredSize = Dimension(640, 640)
         isResizable = false
         isAlwaysOnTop = true
         contentPane.layout = null
